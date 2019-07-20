@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:rtv="http://schemas.android.com/apk/res/com.haoke.myvideo"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_start" >
+
+    <RelativeLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/richText1"
+        android:layout_alignParentRight="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="@dimen/layout_x_200"
+                android:layout_height="@dimen/layout_x_200"
+                android:src="@drawable/start_bg_1" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_x_10"
+                android:gravity="center"
+                android:text="@string/start_1"
+                android:textColor="@color/white"
+                android:textSize="@dimen/layout_x_30" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/start_2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/layout_x_25" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.haoke.view.RichText
+        android:visibility="gone"
+        android:id="@+id/richText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/layout_x_15"
+        android:drawablePadding="@dimen/layout_x_5"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/layout_x_30"
+        rtv:icon_direction="left"
+        rtv:icon_height="@dimen/layout_y_50"
+        rtv:icon_src_normal="@drawable/start_bg_2"
+        rtv:icon_width="@dimen/layout_y_50"
+        rtv:text_color_pressed="@color/blue_p"
+        rtv:text_color_unable="@color/blue_p" />
+
+</RelativeLayout>

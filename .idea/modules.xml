@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/FunSDKDemo_Android_Old2018.iml" filepath="$PROJECT_DIR$/FunSDKDemo_Android_Old2018.iml" />
-      <module fileurl="file://E:\Android\Project\GitLabWorkSpace\FunSDKDemo_Android_Old2018\OldFunSdkDemo.iml" filepath="E:\Android\Project\GitLabWorkSpace\FunSDKDemo_Android_Old2018\OldFunSdkDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyXwProject.iml" filepath="$PROJECT_DIR$/MyXwProject.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/library.iml" filepath="$PROJECT_DIR$/library/library.iml" />
     </modules>
   </component>
 </project>
