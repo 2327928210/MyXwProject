@@ -41,13 +41,22 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
-        android:name=".MyApplication"
+        android:name="com.haoke.myproject.application.MyApplication"
         android:allowBackup="true"
         android:icon="@drawable/logo_app"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.haoke.myvideo.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
         <activity
-            android:name="com.haoke.myproject.MyStartActivity"
+            android:name="com.haoke.myproject.activity.StartActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
             <intent-filter>
@@ -371,16 +380,16 @@
             </intent-filter>
         </service>
 
-        <activity android:name="com.haoke.myproject.MyMainActivity"
+        <activity android:name="com.haoke.myproject.activity.MyMainActivity"
             android:screenOrientation="portrait"/>
-        <!--<activity android:name="com.haoke.myproject.MyStartActivity"></activity>-->
+        <!--<activity android:name="com.haoke.myproject.activity.MyStartActivity"></activity>-->
 
-        <activity
-            android:name="com.haoke.myproject.StartActivity"
-            android:label="@string/app_name"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppStartLoadTranslucent">
-        </activity>
+        <!--<activity-->
+            <!--android:name="com.haoke.myproject.activity.StartActivity"-->
+            <!--android:label="@string/app_name"-->
+            <!--android:screenOrientation="portrait"-->
+            <!--android:theme="@style/Theme.AppStartLoadTranslucent">-->
+        <!--</activity>-->
         <!-- 微信 -->
         <activity
             android:name="com.haoke.myproject.wxapi.WXEntryActivity"
@@ -395,26 +404,46 @@
             <!--android:name="com.haoke.myproject.AboutActivity"-->
             <!--android:screenOrientation="portrait" />-->
         <activity
-            android:name="com.haoke.myproject.RegisterActivity"
+            android:name="com.haoke.myproject.activity.RegisterActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.haoke.myproject.ForgotActivity"
+            android:name="com.haoke.myproject.activity.ForgotActivity"
             android:screenOrientation="portrait" />
-        <!--<activity-->
-            <!--android:name="com.haoke.myproject.EditPassWordActivity"-->
-            <!--android:screenOrientation="portrait" />-->
         <activity
-            android:name="com.haoke.myproject.LoginActivity"
+            android:name="com.haoke.myproject.activity.EditPassWordActivity"
             android:screenOrientation="portrait" />
-        <!--<activity-->
-            <!--android:name="com.haoke.myproject.UserInfoActivity"-->
-            <!--android:screenOrientation="portrait" />-->
-        <!--<activity-->
-            <!--android:name="com.haoke.myproject.NewsActivity"-->
-            <!--android:screenOrientation="portrait" />-->
         <activity
-            android:name="com.haoke.myproject.TwoCodeActivity"
+            android:name="com.haoke.myproject.activity.LoginActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.UserInfoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.AboutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.TwoCodeActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.haoke.myproject.activity.BinDingActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.haoke.myproject.activity.NewsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.haoke.myproject.activity.SetMapActivity"
+            android:screenOrientation="portrait" />
+        <!--<activity-->
+            <!--android:name="com.haoke.myproject.activity."-->
+            <!--android:screenOrientation="portrait" />-->
+
+        <!-- 百度 -->
+        <!-- 百度地图 -->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="NZGfElW3U1YOFAhpIDevNoeVLI86Mq5E" />
     </application>
 
 </manifest>
